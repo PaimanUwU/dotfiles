@@ -1,12 +1,45 @@
 # ========================================================= Alias
 alias sourcezsh='source ~/.zshrc'
 alias code='codium'
-alias vim='zed'
+alias cat='bat'
 alias h='cd ~'
+alias c='clear'
 alias ls='eza --color=always --long --git --icons=always --no-time --no-user --no-permissions --no-filesize'
 alias lt='eza --color=always --long --git --icons=always --no-time --no-user --no-permissions --no-filesize --tree --level=1 --sort=extension --group-directories-first --all -I ".git"'
 
+alias cheats='glow ~/Documents/Dotfiles/Cheatsheets.md'
 
+alias fzf="fzf --style full --preview 'fzf-preview.sh {}' --color 'preview-border:#9999cc,preview-label:#ccccff' --color 'list-border:#9999cc,list-label:#99cc99' --color 'input-border:#669966,input-label:#ffcccc' --color 'header-border:#996666,header-label:#99ccff'"
+alias -g "**"="\$(fzf)"
+
+# --- New Productivity Aliases ---
+
+# Git Simplified
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
+alias gp='git push'
+alias gl="git log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+
+# Navigation & Essentials
+alias ..='cd ..'
+alias ...='cd ../..'
+alias md='mkdir -p'
+alias rd='rm -rf' # Use with caution!
+
+# Development Tools
+alias phpv='php -v'
+alias comp='composer'
+alias cu='composer update'
+alias ci='composer install'
+alias n='npm'
+alias ni='npm install'
+alias nr='npm run'
+
+# Utility
+alias path='echo $PATH | tr ":" "\n"' # View PATH line by line
+alias myip='curl -s https://ifconfig.me && echo' # Get public IP
+alias ezconfig='code ~/.zshrc' # Quick edit this file
 
 # ======================================================== Powerlevel10k
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -96,3 +129,12 @@ export PATH="$PATH:$HOME/.composer/vendor/bin"
 # ======================================================== TheFuck
 eval $(thefuck --alias)
 eval $(thefuck --alias fk)
+
+
+
+
+
+
+# ======================================================== Zoxide
+eval "$(zoxide init --cmd cd zsh)"
+
