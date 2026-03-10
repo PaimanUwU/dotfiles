@@ -79,6 +79,19 @@ To undo,
 stow -D */
 ```
 
+## Tips
+
+you can read this [cheatsheet](https://github.com/PaimanUwU/Dotfiles/blob/7bf2e1b22934f26e1b939c7ad0d65d79ab4eb78d/Cheatsheets.md)
+
+or,
+
+just run this command in the terminal to see the cheatsheets in the terminal.
+
+```bash
+cheats
+```
+
+
 ## Structure
 
 Here's an overview of the repository structure:
