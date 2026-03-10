@@ -18,6 +18,9 @@ _darcs
 .+~          # emacs backup files
 #.*#       # emacs autosave files
 
-^/README.*
-^/LICENSE.*
-^/COPYING
+^image$
+^README\.md$
+^Brewfile$
+^Ghostty Settings$
+\.stowrc
+\.stow-local-ignore

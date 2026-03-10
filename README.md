@@ -70,7 +70,13 @@ Each top-level directory (e.g., `nvim`, `zsh`, `tmux`) represents a package of d
 To "stow" all dotfiles, run:
 
 ```bash
-stow .
+stow */
+```
+
+To undo,
+
+```bash
+stow -D */
 ```
 
 ## Structure
