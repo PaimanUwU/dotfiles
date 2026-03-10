@@ -92,39 +92,7 @@ Each top-level directory (e.g., `nvim`, `zsh`, `tmux`) represents a package of d
 To "stow" all dotfiles, run:
 
 ```bash
-stow --target=$HOME <package_name>
-# Example:
-stow --target=$HOME zsh
-stow --target=$HOME nvim
-stow --target=$HOME tmux
-stow --target=$HOME p10k
-stow --target=$HOME cava
-stow --target=$HOME neofetch
-stow --target=$HOME yazi
-stow --target=$HOME zed
-
-```
-
-**Explanation of `stow`:**
-
-* `stow`: The command to manage symlinks.
-* `--target=$HOME`: Tells `stow` to create the symlinks in your home directory.
-* `<package_name>`: The name of the directory containing the dotfiles (e.g., `zsh`). Stow will look inside this directory and link its contents to your home directory. For example, `stow zsh` will create a symlink from `~/dotfiles/zsh/.zshrc` to `~/.zshrc`.
-
-To link all of them at once, you can iterate through the directories (excluding `image` and other non-dotfile specific folders):
-
-```bash
-for dir in $(find . -maxdepth 1 -mindepth 1 -type d ! -name ".git" ! -name "image" ! -name "Brewfile" ! -name "Ghostty Settings" ! -name ".stow-local-ignore" ! -name ".stowrc" -exec basename {} \;); do
-    stow --target=$HOME $dir
-done
-
-```
-
-**Important:** If you already have existing dotfiles (e.g., a `.zshrc` file), `stow` will complain about conflicts. You'll need to move or delete your existing files before stowing. A common approach is to back them up first:
-
-```bash
-mv ~/.zshrc ~/.zshrc.bak
-
+stow .
 ```
 
 ## Structure
@@ -176,24 +144,15 @@ Here's an overview of the repository structure:
 
 Here are a few glimpses of my setup:
 
-### Terminal and Neofetch
+### Terminal and Neofetch, also Neovim in Action
 
-A quick look at my terminal, showing off `neofetch` and the prompt.
+A quick look at my terminal, showing off `neofetch` and the prompt. My Neovim setup, ready for coding.
 
-
-### Neovim in Action
-
-My Neovim setup, ready for coding.
-
+(image/Screenshot 2026-03-10 at 3.39.16 AM.png)
 
 ### Yazi File Manager
 
 Exploring files with the `yazi` terminal file manager.
-
-
-### Cava Audio Visualizer
-
-The `cava` audio visualizer in action, reacting to sound.
 
 
 ---
