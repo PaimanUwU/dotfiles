@@ -1,29 +1,6 @@
-# dotfiles
-
-Okay, this is an excellent structure for a `dotfiles` repository! Let's craft a comprehensive and user-friendly `README.md` for it, incorporating your requirements for images, Homebrew, and GNU Stow.
-
-Here's a draft for your `README.md`:
-
----
-
 # PaimanUwU's Dotfiles 🚀
 
 Welcome to my personal dotfiles repository! This is where I store and manage all my configuration files for various applications and tools, ensuring a consistent and comfortable development environment across my machines.
-
-## Table of Contents
-
-* [Overview](https://www.google.com/search?q=%23overview)
-* [Features](https://www.google.com/search?q=%23features)
-* [Installation](https://www.google.com/search?q=%23installation)
-* [Prerequisites](https://www.google.com/search?q=%23prerequisites)
-* [Clone the Repository](https://www.google.com/search?q=%23clone-the-repository)
-* [Install Applications (Homebrew)](https://www.google.com/search?q=%23install-applications-homebrew)
-* [Symlink Dotfiles (GNU Stow)](https://www.google.com/search?q=%23symlink-dotfiles-gnu-stow)
-
-
-* [Structure](https://www.google.com/search?q=%23structure)
-* [Screenshots](https://www.google.com/search?q=%23screenshots)
-* [Credits](https://www.google.com/search?q=%23credits)
 
 ## Overview
 
@@ -149,20 +126,20 @@ Here are a few glimpses of my setup:
 
 A quick look at my terminal, showing off `neofetch` and tmux. My Neovim setup, ready for coding.
 
-![screenshots 1](image/Screenshot 2026-03-10 at 3.39.16 AM.png)
-![screenshots 2](image/Screenshot 2026-03-10 at 5.27.59 PM.png)
+![screenshots 1](https://github.com/PaimanUwU/dotfiles/blob/23c42469ae678be005d0b0d6803bc2094af41500/image/Screenshot%202026-03-10%20at%203.39.16%E2%80%AFAM.png)
+![screenshots 2](https://github.com/PaimanUwU/dotfiles/blob/23c42469ae678be005d0b0d6803bc2094af41500/image/Screenshot%202026-03-10%20at%205.27.59%E2%80%AFPM.png)
 
 ### Yazi File Manager
 
 Exploring files with the `yazi` terminal file manager.
 
-![screenshots 3](image/Screenshot 2026-03-10 at 5.27.59 PM.png)
+![screenshots 3](https://github.com/PaimanUwU/dotfiles/blob/23c42469ae678be005d0b0d6803bc2094af41500/image/Screenshot%202026-03-10%20at%203.39.56%E2%80%AFAM.png)
 
 ### Zed editor
 
 My zed editor
 
-![screenshots 4](image/Screenshot 2026-03-10 at 3.40.06 AM.png)
+![screenshots 4](https://github.com/PaimanUwU/dotfiles/blob/23c42469ae678be005d0b0d6803bc2094af41500/image/Screenshot%202026-03-10%20at%203.40.06%E2%80%AFAM.png)
 
 
 
