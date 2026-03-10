@@ -4,7 +4,7 @@
 | **Alias** | **Command** | **Quick Description** |
 | :--- | :--- | :--- |
 | **`sourcezsh`** | `source ~/.zshrc` | **Reload** shell config (alias: `reload`) |
-| **`zshconfig`** | `nano ~/.zshrc` | **Edit** your config file |
+| **`zshconfig`** | `nvim ~/Documents/Dotfiles/zsh/.zshrc` | **Edit** your config file |
 | **`h`** | `cd ~` | **Home** sweet home |
 | **`c`** | `clear` | **Clear** the screen |
 | **`cat`** | `bat` | **Read** with syntax highlighting |

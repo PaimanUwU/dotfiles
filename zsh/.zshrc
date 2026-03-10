@@ -1,5 +1,6 @@
 # ========================================================= Alias
 alias sourcezsh='source ~/.zshrc'
+alias zshconfig='nvim ~/Documents/Dotfiles/zsh/.zshrc'
 alias code='codium'
 alias cat='bat'
 alias h='cd ~'
@@ -39,7 +40,6 @@ alias nr='npm run'
 # Utility
 alias path='echo $PATH | tr ":" "\n"' # View PATH line by line
 alias myip='curl -s https://ifconfig.me && echo' # Get public IP
-alias ezconfig='code ~/.zshrc' # Quick edit this file
 
 # ======================================================== Powerlevel10k
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
