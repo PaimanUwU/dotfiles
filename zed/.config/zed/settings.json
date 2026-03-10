@@ -1,0 +1,130 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "restore_on_startup": "empty_tab",
+  "use_autoclose": true,
+  "use_auto_surround": true,
+  "indent_guides": {
+    "background_coloring": "disabled",
+    "coloring": "fixed",
+    "active_line_width": 2,
+    "enabled": true,
+    "line_width": 1
+  },
+  "vim": {
+    "cursor_shape": {
+      "visual": "underline",
+      "normal": "block"
+    },
+    "use_smartcase_find": false,
+    "toggle_relative_line_numbers": true
+  },
+  "toolbar": {
+    "code_actions": false,
+    "selections_menu": false,
+    "agent_review": false,
+    "quick_actions": false,
+    "breadcrumbs": false
+  },
+  "scrollbar": {
+    "git_diff": true,
+    "show": "never",
+    "cursors": false
+  },
+  "which_key": {
+    "enabled": false
+  },
+  "minimap": {
+    "thumb_border": "none",
+    "thumb": "hover",
+    "show": "never"
+  },
+  "show_wrap_guides": true,
+  "current_line_highlight": "all",
+  "unnecessary_code_fade": 0.3,
+  "cursor_shape": "bar",
+  "multi_cursor_modifier": "cmd_or_ctrl",
+  "agent_buffer_font_size": 15.0,
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "buffer_line_height": "comfortable",
+  "enable_language_server": true,
+  "agent": {
+    "button": false,
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "notification_panel": {
+    "button": true
+  },
+  "git_panel": {
+    "button": true
+  },
+  "outline_panel": {
+    "button": false
+  },
+  "title_bar": {
+    "show_menus": false,
+    "show_user_picture": true,
+    "show_onboarding_banner": true,
+    "show_user_menu": true,
+    "show_sign_in": false,
+    "show_project_items": true,
+    "show_branch_name": true,
+    "show_branch_icon": true
+  },
+  "debugger": {
+    "button": false
+  },
+  "search": {
+    "button": false
+  },
+  "diagnostics": {
+    "button": true
+  },
+  "status_bar": {
+    "cursor_position_button": true,
+    "active_language_button": true
+  },
+  "use_system_window_tabs": false,
+  "tab_bar": {
+    "show_pinned_tabs_in_separate_row": false,
+    "show_tab_bar_buttons": false,
+    "show_nav_history_buttons": false,
+    "show": false
+  },
+  "show_whitespaces": "selection",
+  "tab_size": 2,
+  "relative_line_numbers": "wrapped",
+  "terminal": {
+    "button": false,
+    "cursor_shape": "bar"
+  },
+  "bottom_dock_layout": "contained",
+  "helix_mode": false,
+  "project_panel": {
+    "entry_spacing": "standard",
+    "dock": "right",
+    "button": false
+  },
+  "tabs": {
+    "file_icons": false,
+    "git_status": false
+  },
+  "disable_ai": true,
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "vim_mode": true,
+  "icon_theme": "Catppuccin Macchiato",
+  "base_keymap": "VSCode",
+  "ui_font_size": 15.0,
+  "buffer_font_size": 15.0,
+  "theme": "Catppuccin Mocha (Blur) [Light]",
+}

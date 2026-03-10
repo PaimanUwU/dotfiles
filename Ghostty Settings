@@ -1,0 +1,25 @@
+fullscreen = true
+
+# term = xterm-kitty
+
+# General ======================================
+font-family = JetBrainsMono Nerd Font
+font-size = 12
+window-padding-x = 2
+background = ÒÒ0F0F1A
+theme = Catppuccin Macchiato
+
+# Keybind ======================================
+keybind = cmd+t=unbind
+keybind = cmd+t=text:\x14
+keybind = super+alt+h=goto_split:left
+keybind = super+alt+l=goto_split:right
+keybind = super+alt+j=goto_split:down
+keybind = super+alt+k=goto_split:up
+keybind = super+ctrl+h=resize_split:left,10
+keybind = super+ctrl+l=resize_split:right,10
+keybind = super+ctrl+j=resize_split:down,10
+keybind = super+ctrl+k=resize_split:up,10
+
+# Command ======================================
+command = zsh -c "tmux new-session -A -s Main"
