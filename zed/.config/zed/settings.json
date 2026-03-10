@@ -50,8 +50,8 @@
   "unnecessary_code_fade": 0.3,
   "cursor_shape": "bar",
   "multi_cursor_modifier": "cmd_or_ctrl",
-  "agent_buffer_font_size": 15.0,
-  "ui_font_family": "JetBrainsMono Nerd Font",
+  "agent_buffer_font_size": 14.0,
+  "ui_font_family": "JetBrainsMono Nerd Font Mono",
   "buffer_line_height": "comfortable",
   "enable_language_server": true,
   "agent": {
@@ -120,11 +120,11 @@
     "git_status": false
   },
   "disable_ai": true,
-  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
   "vim_mode": true,
   "icon_theme": "Catppuccin Macchiato",
   "base_keymap": "VSCode",
   "ui_font_size": 15.0,
-  "buffer_font_size": 15.0,
+  "buffer_font_size": 14.0,
   "theme": "Catppuccin Mocha (Blur) [Light]",
 }
