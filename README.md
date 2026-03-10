@@ -81,7 +81,7 @@ stow -D */
 
 ## Tips
 
-you can read this [cheatsheet](https://github.com/PaimanUwU/Dotfiles/blob/7bf2e1b22934f26e1b939c7ad0d65d79ab4eb78d/Cheatsheets.md)
+you can read this [cheatsheet](https://github.com/PaimanUwU/Dotfiles/blob/2f7c54ffe9c897b004253156d1d3e45a5ddfbf07/Cheatsheets.md)
 
 or,
 
