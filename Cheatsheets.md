@@ -1,41 +1,41 @@
+
+---
+
 # 🚀 Master Cheat Sheet (2026)
 
 **Prefix Key:** `Ctrl + Space`
 
-## 🐚 ZSH Environment
+## 🛠️ Tmux Keybindings
 
-| Category | Alias | Action |
-| --- | --- | --- |
-| **System** | `cheats` | Opens this file in `glow` |
-|  | `ls` / `lt` | List (icons/git) / Tree view |
-| **Git** | `gs` / `ga` / `gc` / `gp` | Status / Add / Commit / Push |
-|  | `gl` | Pretty graphical log |
-| **Dev** | `ni` / `nr` | `npm install` / `npm run` |
-|  | `cu` / `ci` | `composer update` / `install` |
-| **Utility** | `y` | Launch **Yazi** file manager |
-|  | `path` | View system PATH cleanly |
-|  | `fk` | "The Fuck" - Fix last command |
+### 🪟 Panes & Navigation
 
----
+| Action | Keybinding |
+| --- | --- |
+| **Split Vertical (Right)** | `Prefix` + `d` |
+| **Split Horizontal (Down)** | `Prefix` + `D` |
+| **Small Terminal Pane** | `Prefix` + `T` |
+| **Navigate** | `Ctrl` + `h/j/k/l` |
+| **Resize Pane** | `Prefix` + `H/J/K/L` (Repeatable) |
 
-## 🛠️ Tmux Configuration
+### 📂 Windows & Sessions
 
-| Category | Keybinding | Action |
-| --- | --- | --- |
-| **System** | `Prefix` + `r` | Reload `tmux.conf` |
-|  | `Prefix` + `e` | Detach client |
-| **Sessions** | `Prefix` + `s` | Open **SessionX** (FZF) |
-|  | `Prefix` + `S` | New session (Prompt) |
-| **Splits** | `Prefix` + `d` | Split Vertical (Right) |
-|  | `Prefix` + `D` | Split Horizontal (Down) |
-|  | `Prefix` + `T` | Small terminal pane (bottom) |
-| **Navigation** | `Ctrl` + `h/j/k/l` | Vim-style movement |
-| **Resize** | `Prefix` + `H/J/K/L` | Resize current pane |
-| **Windows** | `Prefix` + `n` / `p` | Next / Previous window |
+| Action | Keybinding |
+| --- | --- |
+| **SessionX Switcher** | `Prefix` + `s` |
+| **New Session (Prompt)** | `Prefix` + `S` |
+| **New Window** | `Prefix` + `W` |
+| **Next / Prev Window** | `Prefix` + `n` / `p` |
 
----
+### 📝 Copy Mode (Vi Style)
 
-## 🪄 Plugin Shortcuts
+| Action | Keybinding |
+| --- | --- |
+| **Enter Copy Mode** | `Prefix` + `c` |
+| **Begin Selection** | `v` |
+| **Rectangle Selection** | `Ctrl` + `v` |
+| **Yank (Copy)** | `y` |
+
+### 🪄 Plugin Shortcuts
 
 | Plugin | Action | Keybinding |
 | --- | --- | --- |
@@ -43,13 +43,28 @@
 | **SessionX** | Add Session (in UI) | `Ctrl` + `a` |
 |  | Delete Session (in UI) | `Ctrl` + `x` |
 |  | Zoxide Mode | `Ctrl` + `z` |
-|  | New Window | `Ctrl` + `y` |
-| **FZF** | Shell Selection | Type `**` then `Tab` |
 
 ---
 
-## 💡 Productivity Hacks
+## 🐚 ZSH Aliases
 
+| Category | Alias | Action |
+| --- | --- | --- |
+| **System** | `cheats` | Opens this file |
+|  | `ls` / `lt` | List (icons/git) / Tree view |
+| **Git** | `gs`/`ga`/`gc`/`gp` | Status/Add/Commit/Push |
+| **Dev** | `ni` / `nr` | `npm install` / `npm run` |
+|  | `cu` / `ci` | `composer update` / `install` |
+| **Utility** | `y` | Launch **Yazi** |
+|  | `fk` | Correct last command |
+
+---
+
+## 💡 Pro-Tips for your Setup
+
+* **Copy Mode:** You are now in Vi-mode. Use `Prefix + c` to enter copy mode, navigate with `hjkl`, press `v` to start highlighting, and `y` to copy to your clipboard (supported by your `tmux-yank` plugin).
+* **New Window:** Note that you swapped the default window creation key to `Prefix + W`.
+* **SessionX Border:** If you don't see the blue border yet, run `tmux kill-server` and start tmux again—sometimes SessionX caches the `fzf` options and needs a full restart to pick up new border color settings.
 * **The "Magic" Trigger:** Type `**` followed by `Tab` anywhere in your terminal to invoke `fzf` for file/path selection.
 * **Typo Recovery:** Mistyped a command? Type `fk` and hit enter.
 * **Quick Nav:** Use `lt` for a quick visual overview of project structures instead of a long `ls` list.
