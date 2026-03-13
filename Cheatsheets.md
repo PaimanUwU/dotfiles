@@ -1,73 +1,62 @@
-🚀 My Personal CLI Cheatsheet
+# 🚀 Master Cheat Sheet (2026)
 
-🛠️ Core Aliases & System
-| **Alias** | **Command** | **Quick Description** |
-| :--- | :--- | :--- |
-| **`sourcezsh`** | `source ~/.zshrc` | **Reload** shell config (alias: `reload`) |
-| **`zshconfig`** | `nvim ~/Documents/Dotfiles/zsh/.zshrc` | **Edit** your config file |
-| **`h`** | `cd ~` | **Home** sweet home |
-| **`c`** | `clear` | **Clear** the screen |
-| **`cat`** | `bat` | **Read** with syntax highlighting |
-| **`code`** | `codium` | **Edit** in VSCodium |
-| **`cheats`** | `bat .../Cheats` | **View** these notes |
-| **`myip`** | `curl ifconfig.me` | **Check** public IP address |
+**Prefix Key:** `Ctrl + Space`
 
----
+## 🐚 ZSH Environment
 
-🧠 Smart Navigation & Files
-- **`cd <query>`** → Jump to highest-ranked directory (**zoxide**).
-- **`cd <space> <tab>`** → Trigger **fzf** to pick from recent locations.
-- **`cdi`** → **Interactive** fuzzy jump (zoxide + fzf).
-- **`..`** / **`...`** → Go **up** 1 or 2 levels.
-- **`mkcd <dir>`** → **Make** a directory and **enter** it instantly.
-- **`y`** → **Yazi** Terminal File Manager (Press `~` for help).
-- **`fzf`** → **fzf** Open command line fuzzy finder (Adding `**` any command will open with fzf e.g. `nvim **` ).
+| Category | Alias | Action |
+| --- | --- | --- |
+| **System** | `cheats` | Opens this file in `glow` |
+|  | `ls` / `lt` | List (icons/git) / Tree view |
+| **Git** | `gs` / `ga` / `gc` / `gp` | Status / Add / Commit / Push |
+|  | `gl` | Pretty graphical log |
+| **Dev** | `ni` / `nr` | `npm install` / `npm run` |
+|  | `cu` / `ci` | `composer update` / `install` |
+| **Utility** | `y` | Launch **Yazi** file manager |
+|  | `path` | View system PATH cleanly |
+|  | `fk` | "The Fuck" - Fix last command |
 
 ---
 
-📂 Modern File Listing (`eza`)
-- **`ls`** → **The Clean List**: Icons and Git status; hides permissions/sizes/times.
-- **`l`** → **The Detailed List**: Standard `ls -lah` equivalent.
-- **`lt`** → **The Tree View**: 1-level deep, groups folders, sorted by extension, ignores `.git`.
+## 🛠️ Tmux Configuration
+
+| Category | Keybinding | Action |
+| --- | --- | --- |
+| **System** | `Prefix` + `r` | Reload `tmux.conf` |
+|  | `Prefix` + `e` | Detach client |
+| **Sessions** | `Prefix` + `s` | Open **SessionX** (FZF) |
+|  | `Prefix` + `S` | New session (Prompt) |
+| **Splits** | `Prefix` + `d` | Split Vertical (Right) |
+|  | `Prefix` + `D` | Split Horizontal (Down) |
+|  | `Prefix` + `T` | Small terminal pane (bottom) |
+| **Navigation** | `Ctrl` + `h/j/k/l` | Vim-style movement |
+| **Resize** | `Prefix` + `H/J/K/L` | Resize current pane |
+| **Windows** | `Prefix` + `n` / `p` | Next / Previous window |
 
 ---
 
-🐙 Git Productivity
-| **Alias** | **Command** | **Action** |
-| :--- | :--- | :--- |
-| **`gs`** | `git status` | Check status |
-| **`ga`** | `git add .` | Stage **all** changes |
-| **`gc`** | `git commit -m` | Commit with message |
-| **`gp`** | `git push` | Push to remote |
-| **`gl`** | `git log --oneline --graph` | Pretty visual history |
-| **`gco`** | `git checkout` | Switch branches |
+## 🪄 Plugin Shortcuts
+
+| Plugin | Action | Keybinding |
+| --- | --- | --- |
+| **Floax** | Toggle floating pane | `Prefix` + `f` |
+| **SessionX** | Add Session (in UI) | `Ctrl` + `a` |
+|  | Delete Session (in UI) | `Ctrl` + `x` |
+|  | Zoxide Mode | `Ctrl` + `z` |
+|  | New Window | `Ctrl` + `y` |
+| **FZF** | Shell Selection | Type `**` then `Tab` |
 
 ---
 
-💻 Development Environments
-- **Docker:**
-  - `dps`: Clean table of running containers.
-  - `dstop`: Stop **all** running containers at once.
-- **Node/JS:**
-  - `ni` / `ns`: NPM Install / Start.
-  - `rd`: **Nuke** (delete `node_modules` & reinstall).
-- **Python:**
-  - `py`: Run Python 3.
-  - `venv`: Activate local virtual environment.
+## 💡 Productivity Hacks
+
+* **The "Magic" Trigger:** Type `**` followed by `Tab` anywhere in your terminal to invoke `fzf` for file/path selection.
+* **Typo Recovery:** Mistyped a command? Type `fk` and hit enter.
+* **Quick Nav:** Use `lt` for a quick visual overview of project structures instead of a long `ls` list.
+* **Context Preservation:** Since `tmux-continuum` is set to `on`, your sessions will automatically save and restore after a reboot.
+* **Session Management:** Always use `Prefix + S` to name your sessions; it makes using `SessionX` much easier when you have 10+ projects open.
 
 ---
 
-🍺 Homebrew Essentials
-- `brew update && brew upgrade` → Update all formulas and casks.
-- `brew cleanup` → Remove old versions/cached files.
-- `brew info <pkg>` → Check version and dependencies.
+*Last Updated: March 2026*
 
----
-
-⌨️ Keybind
-- `Tmux`
-  - prefix → `cmd + t`
-  - `<prefix> + d` → split horizontally
-  - `<prefix> + D` → split vertically
-  - `<prefix> + e` → detach/exit
- 

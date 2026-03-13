@@ -8,7 +8,7 @@ alias c='clear'
 alias ls='eza --color=always --long --git --icons=always --no-time --no-user --no-permissions --no-filesize'
 alias lt='eza --color=always --long --git --icons=always --no-time --no-user --no-permissions --no-filesize --tree --level=1 --sort=extension --group-directories-first --all -I ".git"'
 
-alias cheats='glow -s dark ~/Documents/Dotfiles/Cheatsheets.md | bat --language=markdown --color=always'
+alias cheats='glow -s dark ~/Documents/Dotfiles/Cheatsheets.md | bat --style=plain'
 
 alias fzf="fzf --style full --preview 'fzf-preview.sh {}' --color 'preview-border:#9999cc,preview-label:#ccccff' --color 'list-border:#9999cc,list-label:#99cc99' --color 'input-border:#669966,input-label:#ffcccc' --color 'header-border:#996666,header-label:#99ccff'"
 alias -g "**"="\$(fzf)"
