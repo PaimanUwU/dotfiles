@@ -13,6 +13,8 @@ alias cheats='CLICOLOR_FORCE=1 glow -s dark ~/Documents/Dotfiles/Cheatsheets.md 
 alias fzf="fzf --style full --preview 'fzf-preview.sh {}' --color 'preview-border:#9999cc,preview-label:#ccccff' --color 'list-border:#9999cc,list-label:#99cc99' --color 'input-border:#669966,input-label:#ffcccc' --color 'header-border:#996666,header-label:#99ccff'"
 alias -g "**"="\$(fzf)"
 
+alias homeserver="ssh home"
+
 # --- New Productivity Aliases ---
 
 # Git Simplified
@@ -137,4 +139,12 @@ eval $(thefuck --alias fk)
 
 # ======================================================== Zoxide
 eval "$(zoxide init --cmd cd zsh)"
+
+
+
+
+
+
+# ======================================================== Starship
+eval "$(starship init zsh)"
 
