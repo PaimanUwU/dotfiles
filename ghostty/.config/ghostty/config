@@ -2,13 +2,16 @@ fullscreen = true
 
 # term = xterm-kitty
 
-font-family = "JetBrainsMono Nerd Font Mono"
-font-size = 12
+font-family = "JetBrainsMono Nerd Font"
+font-size = 13
 window-padding-x = 2
-background = 0F0F1A
+#background = 0F0F1A
+background = 1E1E2E
 theme = Catppuccin Macchiato
+cursor-style = bar
 
-# keybind = cmd+t=unbind
+
+keybind = cmd+t=unbind
 # keybind = cmd+t=text:\x14
 
 keybind = super+alt+h=goto_split:left
@@ -22,4 +25,4 @@ keybind = super+ctrl+j=resize_split:down,10
 keybind = super+ctrl+k=resize_split:up,10
 
 # This creates a session based on the current time/PID so they are always unique
-command = zsh -c "tmux new-session -A -s main"
+command = zsh -c "tmux new-session -A -s PaimanUwU"

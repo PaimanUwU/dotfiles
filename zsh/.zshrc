@@ -4,18 +4,24 @@ alias zshconfig='nvim ~/Documents/Dotfiles/zsh/.zshrc'
 alias code='codium'
 alias cat='bat'
 alias h='cd ~'
+alias v='nvim'
 alias c='clear'
 alias ls='eza --color=always --long --git --icons=always --no-time --no-user --no-permissions --no-filesize'
 alias lt='eza --color=always --long --git --icons=always --no-time --no-user --no-permissions --no-filesize --tree --level=1 --sort=extension --group-directories-first --all -I ".git"'
 
-alias cheats='CLICOLOR_FORCE=1 glow -s dark ~/Documents/Dotfiles/Cheatsheets.md | bat --color=always --style=plain'
+# Cheats
+alias cheats='CLICOLOR_FORCE=1 glow -s dark ~/Documents/Dotfiles/Cheatsheets.md | bat --color=always --style=plain --theme="Catppuccin Mocha" --paging=always'
+alias mdcheats='CLICOLOR_FORCE=1 glow -s dark ~/Documents/Dotfiles/Markdown-Cheatsheets.md | bat --color=always --style=plain --theme="Catppuccin Mocha" --paging=always'
 
+# Fuzzy find
 alias fzf="fzf --style full --preview 'fzf-preview.sh {}' --color 'preview-border:#9999cc,preview-label:#ccccff' --color 'list-border:#9999cc,list-label:#99cc99' --color 'input-border:#669966,input-label:#ffcccc' --color 'header-border:#996666,header-label:#99ccff'"
 alias -g "**"="\$(fzf)"
 
+# Homelab
 alias lab='tmux new-window -n "Home Server" "ssh home"'
 
-# --- New Productivity Aliases ---
+# Alias to nuke zsh history properly
+alias nuke-history='truncate -s 0 ~/.zsh_history && history -p && echo "History nuked! >w<"'
 
 # Git Simplified
 alias gs='git status'
@@ -27,17 +33,6 @@ alias gl="git log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold gr
 # Navigation & Essentials
 alias ..='cd ..'
 alias ...='cd ../..'
-alias md='mkdir -p'
-alias rd='rm -rf' # Use with caution!
-
-# Development Tools
-alias phpv='php -v'
-alias comp='composer'
-alias cu='composer update'
-alias ci='composer install'
-alias n='npm'
-alias ni='npm install'
-alias nr='npm run'
 
 # Utility
 alias path='echo $PATH | tr ":" "\n"' # View PATH line by line
@@ -94,6 +89,11 @@ setopt hist_find_no_dups
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
+
+# Force bar cursor in every new shell
+if [[ -n $TMUX ]]; then
+    printf '\e[5 q'
+fi
 
 
 
