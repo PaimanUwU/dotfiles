@@ -17,3 +17,9 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1E1E2E" })
   end,
 })
+-- Ensure the cursor returns to a bar (beam) when exiting Neovim
+vim.api.nvim_create_autocmd("VimLeave", {
+  callback = function()
+    vim.opt.guicursor = "a:ver25"
+  end,
+})

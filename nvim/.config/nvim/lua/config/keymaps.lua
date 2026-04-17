@@ -3,3 +3,6 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("n", "q", "<Nop>", { noremap = true, silent = true })
+
+-- Paste without overwriting the register
+vim.keymap.set("x", "p", [["_dP]])
