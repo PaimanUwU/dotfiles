@@ -149,3 +149,12 @@ eval "$(zoxide init --cmd cd zsh)"
 # ======================================================== Starship
 eval "$(starship init zsh)"
 
+
+
+
+
+# ======================================================== JDK
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+. "$HOME/.local/bin/env"
