@@ -12,6 +12,7 @@ alias lt='eza --color=always --long --git --icons=always --no-time --no-user --n
 # Cheats
 alias cheats='CLICOLOR_FORCE=1 glow -s dark ~/Documents/Dotfiles/Cheatsheets.md | bat --color=always --style=plain --theme="Catppuccin Mocha" --paging=always'
 alias mdcheats='CLICOLOR_FORCE=1 glow -s dark ~/Documents/Dotfiles/Markdown-Cheatsheets.md | bat --color=always --style=plain --theme="Catppuccin Mocha" --paging=always'
+alias vcheats='CLICOLOR_FORCE=1 glow -s dark ~/Documents/Dotfiles/Nvim-Cheatsheets.md | bat --color=always --style=plain --theme="Catppuccin Mocha" --paging=always'
 
 # Fuzzy find
 alias fzf="fzf --style full --preview 'fzf-preview.sh {}' --color 'preview-border:#9999cc,preview-label:#ccccff' --color 'list-border:#9999cc,list-label:#99cc99' --color 'input-border:#669966,input-label:#ffcccc' --color 'header-border:#996666,header-label:#99ccff'"
@@ -116,6 +117,9 @@ function y() {
 		builtin cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
+
+	# Force bar cursor back after Yazi exit
+	printf '\e[5 q'
 }
 export PATH="/Users/adiaimanputra/.config/herd-lite/bin:$PATH"
 
