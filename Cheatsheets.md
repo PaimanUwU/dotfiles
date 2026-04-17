@@ -70,6 +70,7 @@
 * **Context Preservation:** Since `tmux-continuum` is set to `on`, your sessions will automatically save and restore after a reboot.
 * **Session Management:** Always use `Prefix + S` to name your sessions; it makes using `SessionX` much easier when you have 10+ projects open.
 
+
 ---
 
 *Last Updated: March 2026*
