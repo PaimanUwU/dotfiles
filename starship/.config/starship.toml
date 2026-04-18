@@ -2,6 +2,8 @@ add_newline = true
 palette = 'catppuccin_mocha'
 
 format = """
+$shell\
+$fish_indicator\
 $directory\
 $git_branch\
 $git_status\
@@ -88,6 +90,14 @@ number_threshold = 1
 min_time = 500
 style = 'fg:surface2'
 format = '[$duration]($style)'
+
+[shell]
+disabled = false
+fish_indicator = '🐟' 
+zsh_indicator = '󱆃 '       # If you ever go back
+bash_indicator = ' '
+style = 'bold fg:mauve'
+format = '[$indicator ]($style)'
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
