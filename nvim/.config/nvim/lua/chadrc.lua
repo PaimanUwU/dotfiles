@@ -36,7 +36,7 @@ M.nvdash = {
     "                                                    ",
     "                                                    ",
     "                                                    ",
-  },  
+  },
   buttons = {
     { txt = "  Find File", keys = "f", cmd = "Telescope find_files" },
     { txt = "󱘲  Explorer",  keys = "e", cmd = "lua Snacks.picker.explorer()" },
@@ -46,6 +46,48 @@ M.nvdash = {
     { txt = "󰒲  Lazy",       keys = "l", cmd = "Lazy" },
     { txt = "󰈆  Quit",       keys = "q", cmd = "qa" },
   },
+}
+
+M.ui = {
+  statusline = {
+    separator_style = "block",
+    theme = "default",
+    order = {
+      "mode",
+      "file",
+      "git",
+      "%=",
+      "lsp_msg",
+      "diagnostics",
+      "cwd",
+      "cursor",
+    },
+  },
+}
+
+M.base46 = {
+  theme = "catppuccin",
+  hl_override = {
+    -- Selection visibility fix
+    Visual = { bg = "#3e4452", fg = "NONE" },
+    -- Your other overrides
+    Comment = { italic = true },
+    ["@comment"] = { italic = true },
+    NormalFloat = { bg = "#1E1D2D" },
+    FloatBorder = { fg = "#313244", bg = "#1E1D2D" },
+    WhichKey = { bg = "#1E1D2D" },
+    WhichKeyFloat = { bg = "#1E1D2D" },
+    SnacksNormal = { bg = "#1E1D2D" },
+    SnacksBackdrop = { bg = "#1E1D2D" },
+  },
+  changed_themes = {
+    all = {
+      base_16 = {
+        base01 = "#1E1D2D",
+        base02 = "#1E1D2D",
+      }
+    }
+  }
 }
 
 return M

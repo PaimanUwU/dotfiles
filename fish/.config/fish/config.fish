@@ -98,8 +98,15 @@ set fish_color_autosuggestion 6c7086
 # ========================================================= Initializations
 # Enable Vi keybindings
 fish_vi_key_bindings
-set fish_cursor_default block # Normal mode
-set fish_cursor_insert line # Insert mode
+
+# Force Ctrl+R for all modes (Insert, Normal/Default, and Visual)
+bind -M insert \cr history-pager
+bind -M default \cr history-pager
+bind -M visual \cr history-pager
+
+# Set cursor shapes
+set fish_cursor_default block
+set fish_cursor_insert line
 set fish_cursor_replace_one underscore
 set fish_cursor_visual block
 

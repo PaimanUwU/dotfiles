@@ -24,3 +24,19 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.conceallevel = 2
   end,
 })
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  callback = function()
+    local highlights = {
+      NormalFloat = { bg = "#1E1D2D" },
+      FloatBorder = { fg = "#313244", bg = "#1E1D2D" },
+      WhichKey = { bg = "#1E1D2D" },
+      WhichKeyFloat = { bg = "#1E1D2D" },
+      SnacksNormal = { bg = "#1E1D2D" },
+    }
+
+    for group, settings in pairs(highlights) do
+      vim.api.nvim_set_hl(0, group, settings)
+    end
+  end,
+})

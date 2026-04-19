@@ -147,7 +147,26 @@ return {
         group = "+",
       },
     },
-  }
+  },
+
+  {
+    "Zeioth/garbage-day.nvim",
+    dependencies = "neovim/nvim-lspconfig",
+    event = "VeryLazy",
+    opts = {
+      aggressive_mode = false, -- Set to true if you want it to kill LSPs even faster
+      excluded_lsp_clients = { "lua_ls" }, -- Keep lua_ls alive for your config
+    }
+  },
+
+  {
+    "stevearc/dressing.nvim",
+    event = "VeryLazy",
+    opts = {},
+  },
+  
+
+
 
   -- test new blink
   --

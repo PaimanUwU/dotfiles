@@ -29,7 +29,7 @@ map("n", "<leader>bsj", "<cmd>split<cr><C-w>j",  { desc = "Split Down" })
 map("n", "<leader>bsk", "<cmd>split<cr><C-w>k",  { desc = "Split Up" })
 
 -- 4. Paste Logic
-map("x", "p", '"_dP', { desc = "Paste over selection" })
+map("x", "p", 'p:let @+=@0<CR>:let @"=@0<CR>', { desc = "Clean Paste" })
 
 -- 5. Navigation & Plugins
 map("n", "<C-h>", "<cmd>TmuxNavigateLeft<cr>", { desc = "Tmux Left" })
@@ -46,6 +46,13 @@ map("n", "<leader>nh", function() Snacks.notifier.show_history() end, { desc = "
 -- 6. Tools
 map({ "n", "x", "o" }, "s", function() require("flash").jump() end, { desc = "Flash Jump" })
 map("n", "<leader>cp", "<cmd>MarkdownPreviewToggle<cr>", { desc = "Markdown Preview" })
+
+-- Add this to your custom mappings or init.lua
+vim.keymap.set("n", "<leader>lx", function()
+  vim.lsp.stop_client(vim.lsp.get_active_clients())
+  vim.cmd("LspStart")
+  print("LSP Cache Cleared")
+end, { desc = "LSP: Reset and Clear Memory" })
 
 -- 7. Which-Key Group Registration (For the Vertical List)
 local wk = require("which-key")

@@ -1,12 +1,8 @@
 [app]
-overall = { bg = "reset" }
+overall = { bg = "#1e1e2e" }
 
 [mgr]
-cwd = { fg = "#94e2d5", bg = "#1e1e2e" }
-
-parent_column  = { bg = "#1e1e2e" }
-current_column = { bg = "#1e1e2e" }
-preview_column = { bg = "#1e1e2e" }
+cwd = { fg = "#94e2d5" }
 
 find_keyword  = { fg = "#f9e2af", italic = true }
 find_position = { fg = "#f5c2e7", bg = "reset", italic = true }
@@ -23,7 +19,7 @@ count_selected = { fg = "#1e1e2e", bg = "#89b4fa" }
 border_symbol = "│"
 border_style  = { fg = "#7f849c" }
 
-# syntect_theme = "~/.config/yazi/Catppuccin-mocha.tmTheme"
+syntect_theme = "~/.config/yazi/Catppuccin-mocha.tmTheme"
 
 [tabs]
 active   = { fg = "#1e1e2e", bg = "#cdd6f4", bold = true }
@@ -45,8 +41,8 @@ current = { fg = "#1e1e2e", bg = "#89b4fa" }
 preview = { fg = "#1e1e2e", bg = "#cdd6f4" }
 
 [status]
-sep_left  = { open = "", close = "" }
-sep_right = { open = "", close = "" }
+sep_left  = { open = "█", close = "█" }
+sep_right = { open = "█", close = "█" }
 
 progress_label  = { fg = "#ffffff", bold = true }
 progress_normal = { fg = "#a6e3a1", bg = "#45475a" }
