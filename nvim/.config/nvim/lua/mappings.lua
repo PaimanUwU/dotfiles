@@ -2,55 +2,56 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
--- keymap goes here
+-- 0. Cleanup NvChad Defaults (Avoid Conflicts)
+local del = vim.keymap.del
+del("n", "<leader>h") -- Remove terminal horizontal
+del("n", "<leader>v") -- Remove terminal vertical
+del("n", "<leader>x") -- Remove default buffer close
+del("n", "<leader>b") -- Clear default buffer group
 
+-- 1. General & UI
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
-
--- Paste in visual mode without overwriting register AND staying on the same line
-map("x", "p", '"_dP', { desc = "Paste over selection" })
-
--- Disable macro recording (prevents accidental 'q' triggers)
 map("n", "q", "<Nop>", { desc = "Disable macro recording" })
 
--- Paste without overwriting the register (Black hole register)
-map("x", "p", [["_dP]], { desc = "Paste without overwriting" })
+-- 2. Buffer Navigation (Home Row)
+map("n", "L", function() require("nvchad.tabufline").next() end, { desc = "Buffer Next Tab" })
+map("n", "H", function() require("nvchad.tabufline").prev() end, { desc = "Buffer Prev Tab" })
 
--- Tmux Navigator Mappings
+-- 3. Buffer & Split Management
+map("n", "<leader>bn", "<cmd>enew<cr>", { desc = "Buffer New" })
+map("n", "<leader>bd", function() require("nvchad.tabufline").close_buffer() end, { desc = "Buffer Delete" })
+
+-- Directional Splits 
+map("n", "<leader>bsl", "<cmd>vsplit<cr><C-w>l", { desc = "Split Right" })
+map("n", "<leader>bsh", "<cmd>vsplit<cr><C-w>h", { desc = "Split Left" })
+map("n", "<leader>bsj", "<cmd>split<cr><C-w>j",  { desc = "Split Down" })
+map("n", "<leader>bsk", "<cmd>split<cr><C-w>k",  { desc = "Split Up" })
+
+-- 4. Paste Logic
+map("x", "p", '"_dP', { desc = "Paste over selection" })
+
+-- 5. Navigation & Plugins
 map("n", "<C-h>", "<cmd>TmuxNavigateLeft<cr>", { desc = "Tmux Left" })
 map("n", "<C-j>", "<cmd>TmuxNavigateDown<cr>", { desc = "Tmux Down" })
 map("n", "<C-k>", "<cmd>TmuxNavigateUp<cr>", { desc = "Tmux Up" })
 map("n", "<C-l>", "<cmd>TmuxNavigateRight<cr>", { desc = "Tmux Right" })
-map("n", "<C-\\>", "<cmd>TmuxNavigatePrevious<cr>", { desc = "Tmux Previous" })
 
--- Buffer Navigation
-map("n", "L", function() require("nvchad.tabufline").next() end, { desc = "Buffer Next" })
-map("n", "H", function() require("nvchad.tabufline").prev() end, { desc = "Buffer Previous" })
-
--- lua/mappings.lua
-map("n", "<leader>e", function()
-  Snacks.picker.explorer()
-end, { desc = "Snacks Explorer" })
-
--- If you want to use the Snacks Picker for files (replaces Telescope)
-map("n", "<leader>ff", function()
-  Snacks.picker.files()
-end, { desc = "Snacks Find Files" })
-
--- Open notification history using Snacks
-map("n", "<leader>nh", function()
-  Snacks.notifier.show_history()
-end, { desc = "Notification History" })
-
-
+-- Snacks & Telescope
+map("n", "<leader>e", function() Snacks.picker.explorer() end, { desc = "Snacks Explorer" })
+map("n", "<leader>ff", function() Snacks.picker.files() end, { desc = "Snacks Find Files" })
 map("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", { desc = "Telescope Find Files" })
+map("n", "<leader>nh", function() Snacks.notifier.show_history() end, { desc = "Snacks Notification History" })
 
--- Flash.nvim Mappings
+-- 6. Tools
 map({ "n", "x", "o" }, "s", function() require("flash").jump() end, { desc = "Flash Jump" })
-map({ "n", "x", "o" }, "S", function() require("flash").treesitter() end, { desc = "Flash Treesitter" })
-map("o", "r", function() require("flash").remote() end, { desc = "Remote Flash" })
-map({ "o", "x" }, "R", function() require("flash").treesitter_search() end, { desc = "Treesitter Search" })
-map("c", "<c-s>", function() require("flash").toggle() end, { desc = "Toggle Flash Search" })
-
--- Markdown Preview
 map("n", "<leader>cp", "<cmd>MarkdownPreviewToggle<cr>", { desc = "Markdown Preview" })
+
+-- 7. Which-Key Group Registration (For the Vertical List)
+local wk = require("which-key")
+wk.add({
+  { "<leader>b", group = "buffer", icon = "󰈔" },
+  { "<leader>bs", group = "split", icon = "" },
+  { "<leader>f", group = "file/find", icon = "" },
+  { "<leader>c", group = "code/preview", icon = "󰅩" },
+})

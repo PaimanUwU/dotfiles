@@ -125,7 +125,32 @@ return {
       },
     },
   },
+
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = {
+      preset = "modern", 
+      win = {
+        border = "single",
+        padding = { 1, 2 },
+      },
+      layout = {
+        -- This is the "secret sauce" for the list view
+        columns = 1, -- Forces everything into a single vertical column
+        align = "left",
+        spacing = 3,
+      },
+      icons = {
+        breadcrumb = "»",
+        separator = "➜",
+        group = "+",
+      },
+    },
+  }
+
   -- test new blink
+  --
   -- { import = "nvchad.blink.lazyspec" },
 
   -- {

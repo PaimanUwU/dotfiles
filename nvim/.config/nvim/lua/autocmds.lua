@@ -1,14 +1,15 @@
 require "nvchad.autocmds"
 
+-- Skip dashboard if nvim is opened with a directory
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
+    -- Check if the first argument is a directory (like '.')
     if vim.fn.isdirectory(vim.fn.argv(0)) == 1 then
-      -- If using Snacks Explorer (which you have installed)
+      -- 1. Open your Snacks Explorer
       require("snacks").picker.explorer()
       
-      -- Close the dashboard buffer if it exists
-      local buffers = vim.api.nvim_list_bufs()
-      for _, buf in ipairs(buffers) do
+      -- 2. Find and delete the Nvdash buffer so it's not sitting in the background
+      for _, buf in ipairs(vim.api.nvim_list_bufs()) do
         if vim.bo[buf].filetype == "nvdash" then
           vim.api.nvim_buf_delete(buf, { force = true })
         end

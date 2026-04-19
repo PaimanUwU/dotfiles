@@ -6,7 +6,7 @@ font-family = "JetBrainsMono Nerd Font"
 font-size = 13
 window-padding-x = 2
 #background = 0F0F1A
-background = 1E1E2E
+background = 1E1D2D 
 theme = Catppuccin Macchiato
 cursor-style = bar
 
