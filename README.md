@@ -183,12 +183,12 @@ Here's an overview of the repository structure:
 
 Here are a few glimpses of my setup:
 
-![screenshots 1](images/Pictures/Screenshots/Screenshot 2026-04-20 at 12.44.36 AM.png)
-![screenshots 2](images/Pictures/Screenshots/Screenshot 2026-04-20 at 12.45.30 AM.png)
-![screenshots 3](images/Pictures/Screenshots/Screenshot 2026-04-20 at 12.46.03 AM.png)
-![screenshots 4](images/Pictures/Screenshots/Screenshot 2026-04-20 at 12.46.57 AM.png)
-![screenshots 5](images/Pictures/Screenshots/Screenshot 2026-04-20 at 12.47.15 AM.png)
-![screenshots 6](images/Pictures/Screenshots/Screenshot 2026-04-20 at 12.47.27 AM.png)
+![screenshots 1](https://github.com/PaimanUwU/Dotfiles/blob/4dede3533270f3e044f576dae2db7503d3933a68/images/Pictures/Screenshots/Screenshot%202026-04-20%20at%2012.44.36%E2%80%AFAM.png)
+![screenshots 2](https://github.com/PaimanUwU/Dotfiles/blob/4dede3533270f3e044f576dae2db7503d3933a68/images/Pictures/Screenshots/Screenshot%202026-04-20%20at%2012.45.30%E2%80%AFAM.png)
+![screenshots 3](https://github.com/PaimanUwU/Dotfiles/blob/4dede3533270f3e044f576dae2db7503d3933a68/images/Pictures/Screenshots/Screenshot%202026-04-20%20at%2012.46.03%E2%80%AFAM.png)
+![screenshots 4](https://github.com/PaimanUwU/Dotfiles/blob/4dede3533270f3e044f576dae2db7503d3933a68/images/Pictures/Screenshots/Screenshot%202026-04-20%20at%2012.46.57%E2%80%AFAM.png)
+![screenshots 5](https://github.com/PaimanUwU/Dotfiles/blob/4dede3533270f3e044f576dae2db7503d3933a68/images/Pictures/Screenshots/Screenshot%202026-04-20%20at%2012.47.15%E2%80%AFAM.png)
+![screenshots 6](https://github.com/PaimanUwU/Dotfiles/blob/4dede3533270f3e044f576dae2db7503d3933a68/images/Pictures/Screenshots/Screenshot%202026-04-20%20at%2012.47.27%E2%80%AFAM.png)
 
 ---
 
