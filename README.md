@@ -183,26 +183,12 @@ Here's an overview of the repository structure:
 
 Here are a few glimpses of my setup:
 
-### Terminal and Neofetch, also Neovim in Action
-
-A quick look at my terminal, showing off `neofetch` and tmux. My Neovim setup, ready for coding.
-
-![screenshots 1](https://github.com/PaimanUwU/dotfiles/blob/23c42469ae678be005d0b0d6803bc2094af41500/image/Screenshot%202026-03-10%20at%203.39.16%E2%80%AFAM.png)
-![screenshots 2](https://github.com/PaimanUwU/dotfiles/blob/23c42469ae678be005d0b0d6803bc2094af41500/image/Screenshot%202026-03-10%20at%205.27.59%E2%80%AFPM.png)
-
-### Yazi File Manager
-
-Exploring files with the `yazi` terminal file manager.
-
-![screenshots 3](https://github.com/PaimanUwU/dotfiles/blob/23c42469ae678be005d0b0d6803bc2094af41500/image/Screenshot%202026-03-10%20at%203.39.56%E2%80%AFAM.png)
-
-### Zed editor
-
-My zed editor
-
-![screenshots 4](https://github.com/PaimanUwU/dotfiles/blob/23c42469ae678be005d0b0d6803bc2094af41500/image/Screenshot%202026-03-10%20at%203.40.06%E2%80%AFAM.png)
-
-
+![screenshots 1](https://github.com/PaimanUwU/Dotfiles/blob/4dede3533270f3e044f576dae2db7503d3933a68/images/Pictures/Screenshots/Screenshot%202026-04-20%20at%2012.44.36%E2%80%AFAM.png)
+![screenshots 2](https://github.com/PaimanUwU/Dotfiles/blob/4dede3533270f3e044f576dae2db7503d3933a68/images/Pictures/Screenshots/Screenshot%202026-04-20%20at%2012.45.30%E2%80%AFAM.png)
+![screenshots 3](https://github.com/PaimanUwU/Dotfiles/blob/4dede3533270f3e044f576dae2db7503d3933a68/images/Pictures/Screenshots/Screenshot%202026-04-20%20at%2012.46.03%E2%80%AFAM.png)
+![screenshots 4](https://github.com/PaimanUwU/Dotfiles/blob/4dede3533270f3e044f576dae2db7503d3933a68/images/Pictures/Screenshots/Screenshot%202026-04-20%20at%2012.46.57%E2%80%AFAM.png)
+![screenshots 5](https://github.com/PaimanUwU/Dotfiles/blob/4dede3533270f3e044f576dae2db7503d3933a68/images/Pictures/Screenshots/Screenshot%202026-04-20%20at%2012.47.15%E2%80%AFAM.png)
+![screenshots 6](https://github.com/PaimanUwU/Dotfiles/blob/4dede3533270f3e044f576dae2db7503d3933a68/images/Pictures/Screenshots/Screenshot%202026-04-20%20at%2012.47.27%E2%80%AFAM.png)
 
 ---
 
