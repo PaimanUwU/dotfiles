@@ -62,6 +62,27 @@ M.base46 = {
     -- Keep your previous Visual and Comment overrides
     Visual = { bg = "#3e4452", fg = "NONE" },
     Comment = { italic = true },
+    
+
+    -- Heading Backgrounds (Force high-contrast blocks)
+    RenderMarkdownH1Bg = { fg = "#1e1e2e", bg = "#89b4fa", bold = true }, -- Blue
+    RenderMarkdownH2Bg = { fg = "#1e1e2e", bg = "#a6e3a1", bold = true }, -- Green
+    RenderMarkdownH3Bg = { fg = "#1e1e2e", bg = "#f9e2af", bold = true }, -- Yellow
+    RenderMarkdownH4Bg = { fg = "#1e1e2e", bg = "#f5c2e7", bold = true }, -- Pink
+    RenderMarkdownH5Bg = { fg = "#1e1e2e", bg = "#94e2d5", bold = true }, -- Teal
+    RenderMarkdownH6Bg = { fg = "#1e1e2e", bg = "#fab387", bold = true }, -- Peach
+
+    -- Heading Icons (Foreground only)
+    RenderMarkdownH1 = { fg = "#89b4fa" },
+    RenderMarkdownH2 = { fg = "#a6e3a1" },
+    RenderMarkdownH3 = { fg = "#f9e2af" },
+
+    -- Table borders to make them look like the TUI repo
+    RenderMarkdownTableHead = { fg = "#89b4fa", bold = true },
+    RenderMarkdownTableFill = { fg = "#313244" }, -- The line color
+    
+    -- Code block background (to stand out from your #1E1D2D)
+    RenderMarkdownCode = { bg = "#181825" },
   },
   changed_themes = {
     catppuccin = {
