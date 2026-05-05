@@ -110,8 +110,30 @@ function brain
             echo "# "(string join ' ' $title_parts) > $filename
             nvim $filename
 
+        case "mkdir"
+            # Usage: brain mkdir <p|a|r> <folder-name>
+            set -l type $argv[2]
+            set -l folder_name (string join '-' $argv[3..-1] | string lower)
+            
+            if test -z "$type"; or test -z "$folder_name"
+                echo "Usage: brain mkdir [p|a|r] <name>"
+                echo "  p = Projects, a = Areas, r = Resources"
+                return 1
+            end
+
+            switch $type
+                case "p"; set target "10_Projects"
+                case "a"; set target "20_Areas"
+                case "r"; set target "30_Resources"
+                case "*"; echo "Invalid type. Use p, a, or r."; return 1
+            end
+
+            set -l full_path "$notes_dir/$target/$folder_name"
+            mkdir -p $full_path
+            touch $full_path/.gitkeep
+            echo "Created directory: $target/$folder_name"
+
         case "todo"
-            # Scans for markdown checkboxes and opens nvim at the specific line
             set -l todo (rg --column --line-number --no-heading --color=always --smart-case "- \[ \]" $notes_dir | fzf --ansi --delimiter : --preview 'bat --color=always --highlight-line {2} {1}')
             if test -n "$todo"
                 set -l file (echo $todo | cut -d: -f1)
@@ -124,18 +146,18 @@ function brain
                 echo "Usage: brain cap <message>"; return 1
             end
             set -l date (date +%Y-%m-%d)
-            echo "- [$date] $argv[2..-1]" >> "$notes_dir/00_Inbox/capture.md"
-            echo "Thought captured to 00_Inbox/capture.md"
+            echo "- [$date] $argv[2..-1]" >> "$notes_dir/capture.md"
+            echo "Thought captured to $notes_dir/capture.md"
 
         case "sync"
             cd $notes_dir
             git add .
-            git commit -m "Brain update: (date +%Y-%m-%d)"
+            set -l current_date (date +%Y-%m-%d)
+            git commit -m "Brain update: $current_date"
             git push
             cd -
 
         case "random"
-            # Open a random note to spark inspiration or for revision
             set -l note (fd . $notes_dir --type f --extension md | shuf -n 1)
             test -n "$note"; and nvim $note
 
@@ -148,22 +170,20 @@ function brain
             echo "Usage: brain [command] [arguments]"
             echo ""
             echo "Commands:"
-            echo "  new <title>    Create a new timestamped note in 00_Inbox"
-            echo "  search         Global search through all notes using fzf"
-            echo "  todo           Find all '- [ ]' tasks across all notes"
-            echo "  cap <msg>      Quickly append a thought to capture.md"
-            echo "  random         Open a random note (great for revision)"
-            echo "  sync           Git add, commit, and push notes"
-            echo "  dir/tree       Show directory structure via ezatree"
-            echo "  * (default)    Open Yazi in the notes directory"
-            echo ""
-            echo "Current Brain Path: $notes_dir"
+            echo "  new <title>      Create timestamped note in 00_Inbox"
+            echo "  mkdir <t> <name> Create folder in (p)rojects, (a)reas, or (r)esources"
+            echo "  search           Global search through all notes"
+            echo "  todo             Find all active tasks"
+            echo "  cap <msg>        Quickly append to capture.md"
+            echo "  random           Open a random note"
+            echo "  sync             Git sync all changes"
+            echo "  dir/tree         Show directory structure"
+            echo "  * (default)      Open Yazi"
 
         case "*"
             cd $notes_dir && yazi
     end
 end
-
 
 # ========================================================= Theming
 # Syntax Highlighting Colors (Catppuccin Mocha-ish)
