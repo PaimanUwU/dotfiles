@@ -4,12 +4,14 @@ fullscreen = true
 
 font-family = "JetBrainsMono Nerd Font"
 font-size = 13
-window-padding-x = 2
 #background = 0F0F1A
 background = 1E1D2D 
 theme = Catppuccin Macchiato
 cursor-style = bar
 
+window-padding-x = 5
+window-padding-y = 5
+window-padding-balance = true
 
 keybind = cmd+t=unbind
 # keybind = cmd+t=text:\x14

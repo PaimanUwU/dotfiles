@@ -114,12 +114,12 @@
       "key": "󱫐 Uptime",
       "keyColor": "magenta"
     },
-    {
-      "type": "command",
-      "key": " Brew",
-      "keyColor": "magenta",
-      "text": "brew outdated | wc -l | xargs echo"
-    },
+    // {
+    //   "type": "command",
+    //   "key": " Brew",
+    //   "keyColor": "magenta",
+    //   "text": "brew outdated | wc -l | xargs echo"
+    // },
     {
       "type": "custom",
       "format": "\u001b[90m└────────────────────────────────────────────────────┘"
