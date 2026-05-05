@@ -74,6 +74,81 @@ function y
     printf '\e[5 q' # Force bar cursor back
 end
 
+# For my second-brain
+function brain
+    set -l notes_dir ~/Documents/Notes
+    
+    switch "$argv[1]"
+        case "search"
+            set -l note (fd . $notes_dir --type f --extension md | fzf --preview 'bat --color=always --style=numbers {}')
+            test -n "$note"; and nvim $note
+
+        case "new"
+            if test (count $argv) -lt 2
+                echo "Usage: brain new <title>"; return 1
+            end
+            set -l title_parts $argv[2..-1]
+            set -l date (date +%Y-%m-%d)
+            set -l clean_title (string join '-' $title_parts | string lower)
+            set -l filename "$notes_dir/00_Inbox/[$date]$clean_title.md"
+            echo "# "(string join ' ' $title_parts) > $filename
+            nvim $filename
+
+        case "todo"
+            # Scans for markdown checkboxes and opens nvim at the specific line
+            set -l todo (rg --column --line-number --no-heading --color=always --smart-case "- \[ \]" $notes_dir | fzf --ansi --delimiter : --preview 'bat --color=always --highlight-line {2} {1}')
+            if test -n "$todo"
+                set -l file (echo $todo | cut -d: -f1)
+                set -l line (echo $todo | cut -d: -f2)
+                nvim +$line $file
+            end
+
+        case "cap"
+            if test (count $argv) -lt 2
+                echo "Usage: brain cap <message>"; return 1
+            end
+            set -l date (date +%Y-%m-%d)
+            echo "- [$date] $argv[2..-1]" >> "$notes_dir/00_Inbox/capture.md"
+            echo "Thought captured to 00_Inbox/capture.md"
+
+        case "sync"
+            cd $notes_dir
+            git add .
+            git commit -m "Brain update: (date +%Y-%m-%d)"
+            git push
+            cd -
+
+        case "random"
+            # Open a random note to spark inspiration or for revision
+            set -l note (fd . $notes_dir --type f --extension md | shuf -n 1)
+            test -n "$note"; and nvim $note
+
+        case "dir" "tree"
+            ezatree --level=2 $notes_dir
+
+        case "-h" "--help"
+            echo "Terminal Second Brain CLI"
+            echo "--------------------------"
+            echo "Usage: brain [command] [arguments]"
+            echo ""
+            echo "Commands:"
+            echo "  new <title>    Create a new timestamped note in 00_Inbox"
+            echo "  search         Global search through all notes using fzf"
+            echo "  todo           Find all '- [ ]' tasks across all notes"
+            echo "  cap <msg>      Quickly append a thought to capture.md"
+            echo "  random         Open a random note (great for revision)"
+            echo "  sync           Git add, commit, and push notes"
+            echo "  dir/tree       Show directory structure via ezatree"
+            echo "  * (default)    Open Yazi in the notes directory"
+            echo ""
+            echo "Current Brain Path: $notes_dir"
+
+        case "*"
+            cd $notes_dir && yazi
+    end
+end
+
+
 # ========================================================= Theming
 # Syntax Highlighting Colors (Catppuccin Mocha-ish)
 set fish_color_normal cdd6f4
@@ -112,5 +187,5 @@ starship init fish | source
 # ========================================================= Greeting
 function fish_greeting
   # fastfetch
-    echo "Welcome back, Adi! Let's make something beautiful >w<"
+  #  echo "Welcome back, Adi! Let's make something beautiful >w<"
 end
