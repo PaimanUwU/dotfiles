@@ -1,9 +1,8 @@
 # ========================================================= Abbreviations
 # These will expand as you hit Space or Enter
 
-# Config & Reload
+# Config Reload
 abbr sourcefish 'source ~/.config/fish/config.fish'
-abbr fishconfig 'nvim ~/Documents/Dotfiles/fish/config.fish'
 
 # General Tools
 abbr code codium
@@ -72,6 +71,23 @@ function y
     end
     rm -f -- "$tmp"
     printf '\e[5 q' # Force bar cursor back
+end
+
+# Config quick edit
+function config --description "Open specific dotfiles quickly"
+    switch $argv[1]
+        case fish
+            nvim ~/Documents/Dotfiles/fish/.config/fish/config.fish
+        case tmux
+            nvim ~/Documents/Dotfiles/tmux/.config/tmux/tmux.conf
+        case ghostty
+            nvim ~/Documents/Dotfiles/ghostty/.config/ghostty/config
+        case nvim
+            nvim ~/Documents/Dotfiles/nvim/.config/nvim/*
+        case '*'
+            echo "Usage: config [fish|tmux|ghostty|nvim]"
+            echo "Unknown configuration: $argv[1]"
+    end
 end
 
 # For my second-brain
