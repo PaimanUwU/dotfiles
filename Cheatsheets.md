@@ -6,38 +6,27 @@
 ---
 
 ## 🧠 Second Brain (Terminal PKM)
-| Action | Command | Notes |
+| Action | Command / Key | Notes |
 | :--- | :--- | :--- |
-| **Open Brain** | `brain` | Opens **Yazi** in `~/Documents/Notes` |
-| **Search Notes** | `brain search` | Global `fzf` + `bat` preview across all notes |
+| **Quick Open** | `Prefix + B` | (Tmux) New window direct to Brain |
+| **Float Brain** | `Prefix + g` | (Tmux) Popup Yazi for quick reference |
+| **Search Notes** | `brain search` | Global `fzf` + `bat` preview |
 | **New Note** | `brain new [title]` | Creates `[YYYY-MM-DD]title.md` in Inbox |
-| **Quick Capture** | `brain cap "[msg]"` | Appends thought to `capture.md` |
-| **Task View** | `brain todo` | Aggregates all `- [ ]` tasks from all files |
-| **Academic Jump** | `fclass` | Search specifically in **CS230/CS110** folders |
-| **Visual Tree** | `brain dir` | `ezatree` overview of your brain |
-| **Sync** | `brain sync` | Git add/commit/push your knowledge base |
-| **Help** | `brain -h` | View all subcommands |
+| **New Folder** | `brain mkdir [p/a/r]` | Create subfolders in PARA pillars |
+| **Task View** | `brain todo` | Aggregates all `- [ ]` tasks |
+| **Quick Capture** | `brain cap "[msg]"` | Appends to root `capture.md` |
+| **Academic Jump**| `fclass` | Search **CS230/CS110** folders only |
+| **Sync** | `brain sync` | Git auto-sync knowledge base |
 
 ---
 
 ## 🐚 Fish Core & Navigation
-
-### 📂 Navigation & Abbreviations
 | Action | Command / Abbr | Notes |
 | :--- | :--- | :--- |
-| **Open Yazi** | `y` | Syncs `cwd` on exit + Bar cursor fix |
-| **Quick Jump** | `z [folder]` | Zoxide: jumps to frequent folders |
+| **Open Yazi** | `y` | Syncs `cwd` on exit |
+| **Quick Jump** | `z [folder]` | Zoxide: smart folder jumping |
 | **Modern LS** | `ls` | `eza` with Git & Icons |
-| **Folder Tree** | `lt` | Expands to `ezatree --level=%cursor` |
-
-
-### ⌨️ Completion & History Keybindings
-| Key | Action | Result |
-| :--- | :--- | :--- |
-| **`Tab`** | **Tab Complete** | Shows options with descriptions |
-| **`Ctrl + R`** | **History** | Interactive `fzf` search through history |
-| **`→` or `Ctrl + F`** | **Accept** | Accepts the grey "ghost text" suggestion |
-| **`Alt + →`** | **Partial Accept** | Accepts only the next word |
+| **Folder Tree** | `lt` | `ezatree --level=%cursor` |
 
 ---
 
@@ -54,18 +43,19 @@
 ## 💻 Developer Workflow
 | Action | Abbr / Alias | Notes |
 | :--- | :--- | :--- |
-| **Edit Config** | `fishconfig` | Points to your Dotfiles |
+| **Quick Edit Config** | `config [fish/tmux/ghostty/nvim]` | Points to your Dotfiles |
 | **Reload Config** | `sourcefish` | Hot-reloads `config.fish` |
 | **Neovim** | `v` | Uses Vi mode cursor logic |
-| **Home Server** | `lab` | New Tmux window + SSH |
+| **Tmux Reload** | `Prefix + r` | Reloads `tmux.conf` |
 
 ---
 
 ## 💡 Custom Pro-Tips
-* **Daily Workflow:** Start your day with `brain new Daily Log` to clear your head.
-* **Academic Success:** Use `fclass` during lectures to quickly reference previous diploma (CS110) notes.
+* **Brain Hierarchy:** `p` = Projects, `a` = Areas, `r` = Resources.
+* **Non-Blocking:** Use `Prefix + g` to check notes while coding without switching windows.
+* **Syncing:** Always run `brain sync` before shutting down to ensure your CS230 notes are backed up.
 * **Vi Mode:** `|` is Insert mode, `█` is Normal mode. Hit `Esc` to toggle.
 
 ---
 
-*Last Updated: May 5, 2026*
+*Last Updated: May 5, 2026* | `>w<`
