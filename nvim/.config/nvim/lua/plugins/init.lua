@@ -108,10 +108,14 @@ return {
     "folke/which-key.nvim",
     event = "VeryLazy",
     opts = {
-      preset = "modern",
+      preset = "helix",
+      sort = { "local", "order", "group", "alphanum" },
       win = {
         border = "single",
         padding = { 1, 2 },
+        col = 1,
+        width = 40,
+        height = { min = 20, max = 50 },
       },
       layout = {
         columns = 1,
@@ -122,6 +126,7 @@ return {
         breadcrumb = "»",
         separator = "➜",
         group = "+",
+        mapping = false,
       },
     },
   },
@@ -172,16 +177,16 @@ return {
   --   },
   -- },
 
-  -- {
-  --   "nvim-java/nvim-java",
-  --   -- We change 'ft = "java"' to 'lazy = true' and use a command
-  --   cmd = "JavaStart", 
-  --   config = function()
-  --     require("java").setup()
-  --     require("lspconfig").jdtls.setup({
-  --       on_attach = require("nvchad.configs.lspconfig").on_attach,
-  --       capabilities = require("nvchad.configs.lspconfig").capabilities,
-  --     })
-  --   end,
-  -- },
+  {
+    "nvim-java/nvim-java",
+    -- We change 'ft = "java"' to 'lazy = true' and use a command
+    cmd = "JavaStart", 
+    config = function()
+      require("java").setup()
+      require("lspconfig").jdtls.setup({
+        on_attach = require("nvchad.configs.lspconfig").on_attach,
+        capabilities = require("nvchad.configs.lspconfig").capabilities,
+      })
+    end,
+  },
 }

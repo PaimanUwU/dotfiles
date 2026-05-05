@@ -34,3 +34,6 @@ require('render-markdown').setup({
         },
     },
 })
+
+vim.opt.number = true          -- Shows the absolute line number for the current line
+vim.opt.relativenumber = true  -- Shows relative numbers for all other lines
