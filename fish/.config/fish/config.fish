@@ -162,7 +162,7 @@ function brain
             test -n "$note"; and nvim $note
 
         case "dir" "tree"
-            ezatree --level=2 $notes_dir
+            ezatree --level=2 --ignore-glob=".git|.gitignore|.gitkeep" $notes_dir
 
         case "-h" "--help"
             echo "Terminal Second Brain CLI"
