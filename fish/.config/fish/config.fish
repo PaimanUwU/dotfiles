@@ -41,6 +41,7 @@ alias vcheats='CLICOLOR_FORCE=1 glow -s dark ~/Documents/Dotfiles/Nvim-Cheatshee
 alias lab='tmux new-window -n "Home Server" "ssh home"'
 alias nuke-history='history clear; echo "History nuked! >w<"'
 alias whatshell 'status --is-interactive; and echo "You are in fish! >w<"'
+alias saver='cmatrix -C blue'
 
 # ========================================================= Path & Environment
 # Fish uses fish_add_path to handle $PATH safely
