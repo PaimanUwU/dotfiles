@@ -1,3 +1,19 @@
+# MacOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Database and Editor locks (Zed, etc.)
+*.mdb
+*.lock
+*.tmp
+
+# App-specific state
+.seiri/
+.trash/
 tmux/.config/tmux/plugins/
 ssh/.ssh
 zed/.config/zed/prompts/prompts-library-db.0.mdb
+
+# Git-specific (if you have nested repos, though rare)
+.git/
