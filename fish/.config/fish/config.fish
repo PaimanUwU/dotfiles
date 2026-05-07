@@ -78,13 +78,17 @@ end
 function config --description "Open specific dotfiles quickly"
     switch $argv[1]
         case fish
-            nvim ~/Documents/Dotfiles/fish/.config/fish/config.fish
+            cd ~/Documents/Dotfiles/fish/.config/fish/
+            nvim .
         case tmux
-            nvim ~/Documents/Dotfiles/tmux/.config/tmux/tmux.conf
+            cd ~/Documents/Dotfiles/tmux/.config/tmux/
+            nvim .
         case ghostty
-            nvim ~/Documents/Dotfiles/ghostty/.config/ghostty/config
+            cd ~/Documents/Dotfiles/ghostty/.config/ghostty/
+            nvim .
         case nvim
-            nvim ~/Documents/Dotfiles/nvim/.config/nvim/*
+            cd ~/Documents/Dotfiles/nvim/.config/nvim/
+            nvim .
         case '*'
             echo "Usage: config [fish|tmux|ghostty|nvim]"
             echo "Unknown configuration: $argv[1]"
