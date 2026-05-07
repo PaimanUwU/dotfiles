@@ -77,7 +77,7 @@ wk.add({
   { "<leader>g", icon = "󰊢", group = "Git" },
   { "<leader>m", icon = "󱪖", group = "Marks" },
   { "<leader>p", icon = "󰏖", group = "Lazy" },
-  { "<leader>r", icon = "󰑐", group = "Rename" },
+  { "<leader>r", icon = "󰑐", group = "Editor" },
   { "<leader>t", icon = "󰙵", group = "Terminal" },
   { "<leader>w", icon = "󰓩", group = "Window" },
 
