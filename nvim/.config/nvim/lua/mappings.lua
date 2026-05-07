@@ -8,6 +8,7 @@ del("n", "<leader>h") -- Remove terminal horizontal
 del("n", "<leader>v") -- Remove terminal vertical
 del("n", "<leader>x") -- Remove default buffer close
 del("n", "<leader>b") -- Clear default buffer group
+del("n", "<leader>n") -- line number
 
 -- 1. General & UI
 map("n", ";", ":", { desc = "CMD enter command mode" })
